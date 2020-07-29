@@ -1,3 +1,5 @@
+package com.api.test.token;
+
 public class CoreTenantConfig {
     public String client_id="uts";
     public String  client_secret="Jo97yD8UPJgcGPxpevHMDpU1ndNsn911O9FURw4fGolcDy7CVjsaK7FBsj8nqZWj";
@@ -6,12 +8,16 @@ public class CoreTenantConfig {
     public String tenant="core";
     public  String Content_Type="application/x-www-form-urlencoded";
 
+
     private  static CoreTenantConfig coretenantConfig;
     public static CoreTenantConfig getInstance(){
         if (coretenantConfig==null){
             coretenantConfig = new CoreTenantConfig();
         }
         return coretenantConfig;
+    }
+    public static void loaddata(String filepath){
+
     }
 
 }
