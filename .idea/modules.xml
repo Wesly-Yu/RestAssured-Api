@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/RestAssured-Api.iml" filepath="$PROJECT_DIR$/.idea/RestAssured-Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.api.test.wesley/com.api.test.wesley.iml" filepath="$PROJECT_DIR$/com.api.test.wesley/com.api.test.wesley.iml" />
+    </modules>
+  </component>
+</project>
