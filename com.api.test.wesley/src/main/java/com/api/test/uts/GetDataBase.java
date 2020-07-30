@@ -1,11 +1,11 @@
 package com.api.test.uts;
-
 import com.api.test.token.CoreTenant;
 import com.api.test.token.CoreTenantConfig;
 import org.junit.Test;
-
 import static io.restassured.RestAssured.given;
+import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.lessThan;
 
 public class GetDataBase {
     String utsjsonbody = "{\n" +
@@ -27,13 +27,18 @@ public class GetDataBase {
             "}";
     @Test
     public void senddata(){
-        given().log().all()
+        given()
                 .contentType(CoreTenantConfig.getInstance().conten_type)
                 .header("Authorization", "Bearer" +CoreTenant.return_token())
                 .body(utsjsonbody)
                 .when().post("https://gateway.cn1-cert.mindsphere-in.cn/api/usagetransparency/v3/usages")
                 .then()
-                .statusCode(200).extract().response().equals("Data is successfully saved to the database");
+                .statusCode(200)
+                .time(lessThan(2L),SECONDS)
+                .log().all()
+                .assertThat().body(equalTo("Data is successfully saved to the database"));
+
+
 
     }
 
