@@ -14,12 +14,13 @@ public class getaccesstoken {
         useRelaxedHTTPSValidation();
 
     }
+
+    //获取token
     @Test
     public void topic(){
                  CoreTenant coretenant = new CoreTenant();
                  String token = coretenant.getToken();
-                 assertThat(token,not(equalTo(null)));
-
+                 assertThat(token,not(equalTo(null)));   //断言是否获取到token
     }
 
 }

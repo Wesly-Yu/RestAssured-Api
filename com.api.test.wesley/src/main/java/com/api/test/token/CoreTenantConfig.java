@@ -8,7 +8,23 @@ public class CoreTenantConfig {
     public String tenant="core";
     public  String Content_Type="application/x-www-form-urlencoded";
     public  String  conten_type = "application/json";
-
+    public String utsjsonbody = "{\n" +
+            "\t\"CustomerTenantID\": \"core\",\n" +
+            "\t\"CustomerUserID\": \"wesley.yu@siemens.com\",\n" +
+            "\t\"UTSUsageData\": [\n" +
+            "\t\t{\n" +
+            "\t\t\t\"resourceName\": \"markAsset\",\n" +
+            "\t\t\t\"resourceAlias\": \"managemymachines\",\n" +
+            "\t\t\t\"UsageData\": [\n" +
+            "\t\t\t\t{\n" +
+            "\t\t\t\t\t\"usage\": 1,\n" +
+            "\t\t\t\t\t\"usageUnit\": \"manage-mymachine-unit\",\n" +
+            "\t\t\t\t\t\"usageDate\": \"2020-07-30T23:55:37+0100\"\n" +
+            "        }\n" +
+            "      ]\n" +
+            "    }\n" +
+            "  ]\n" +
+            "}";
 
     private  static CoreTenantConfig coretenantConfig;
     public static CoreTenantConfig getInstance(){
