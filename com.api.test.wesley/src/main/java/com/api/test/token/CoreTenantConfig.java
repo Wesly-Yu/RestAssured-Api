@@ -7,6 +7,7 @@ public class CoreTenantConfig {
     public String iam_action="client_credentials.tenant-impersonation";
     public String tenant="core";
     public  String Content_Type="application/x-www-form-urlencoded";
+    public  String  conten_type = "application/json";
 
 
     private  static CoreTenantConfig coretenantConfig;
