@@ -2,13 +2,12 @@ package com.api.test.uts;
 import com.api.test.token.CoreTenant;
 import com.api.test.token.CoreTenantConfig;
 import com.jayway.jsonpath.JsonPath;
-import io.restassured.response.Response;
-import org.junit.Test;
+
 import static io.restassured.RestAssured.given;
 
 public class GetDataBase {
 
-    @Test
+
     public String senddata(String date){
         String body = JsonPath.parse(this.getClass()
         .getResourceAsStream("/data/uts.json")).set("$.usageDate",date).jsonString();

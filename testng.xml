@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/RestAssured-Api/com.api.test.wesley">
+        <classes>
+            <class name="com.api.test.uts.GetDataBase">
+                <methods>
+                    <include name="senddata"/>
+                </methods>
+            </class>
+            <class name="utstestcase.QAGP_100483">
+                <methods>
+                    <include name="testcase_QAGP_100483"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
