@@ -1,0 +1,17 @@
+{
+  "CustomerTenantID": "core",
+  "CustomerUserID": "wesley.yu@siemens.com",
+  "UTSUsageData": [
+    {
+      "resourceName": "markAsset",
+      "resourceAlias": "managemymachines",
+      "UsageData": [
+        {
+          "usage": 1,
+          "usageUnit": "manage-mymachine-unit",
+          "usageDate": "2020-07-29T23:55:37+0100"
+        }
+      ]
+    }
+  ]
+}

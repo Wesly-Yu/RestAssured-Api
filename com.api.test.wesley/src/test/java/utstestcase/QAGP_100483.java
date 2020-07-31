@@ -13,9 +13,7 @@ public class QAGP_100483 {
     @Test
     public  void  testcase_QAGP_100483(){
         GetDataBase  uploaddata = new GetDataBase();
-        String  dataresponse = uploaddata.senddata();
-        System.out.println("---------------");
-        System.out.println(dataresponse);
+        String  dataresponse = uploaddata.senddata("2020-07-31T23:55:37+0100");
         assertThat(dataresponse,equalTo("Data is successfully saved to the database"));
     }
 }
