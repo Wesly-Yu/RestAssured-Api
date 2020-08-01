@@ -1,5 +1,7 @@
 package com.api.test;
 
+import com.jayway.jsonpath.DocumentContext;
+import com.jayway.jsonpath.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
@@ -14,6 +16,15 @@ public class Restful {
             requestSpecification.queryParam(entry.getKey(),entry.getValue());
         });
         return  requestSpecification.when().request("get","www.baidu.com");
+    }
+    public  static String  template(String path,HashMap<String,Object>map){
+        DocumentContext  doucumentContext = JsonPath.parse(Restful.class.getResourceAsStream(path));
+        map.entrySet().forEach(entry ->{
+            doucumentContext.set(entry.getKey(),entry.getValue());
+        } );
+        return  doucumentContext.jsonString();
+
+
     }
 
 }
